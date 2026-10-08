@@ -326,6 +326,14 @@ main:focus{outline:none}
   #0d0d0f}
 .cv-sgt::before{content:"";position:absolute;left:36%;top:42%;width:52%;height:34%;border:1px dashed var(--muted)}
 .cv-sgt::after{content:"";position:absolute;left:calc(36% - 4px);top:calc(42% - 4px);width:9px;height:9px;background:var(--accent)}
+.cv-sueco{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:minmax(0,1fr);align-items:start;gap:8px;padding:36px 18px 0;background:linear-gradient(var(--line-strong),var(--line-strong)) 0 36px/100% 1px no-repeat,#0d0d0f}
+.cv-sueco .sw{position:relative;height:var(--sh);border:1px solid var(--line-strong);border-top:0;background-color:#121215;clip-path:polygon(0 0,100% 0,100% calc(100% - 5px),90% 100%,80% calc(100% - 5px),70% 100%,60% calc(100% - 5px),50% 100%,40% calc(100% - 5px),30% 100%,20% calc(100% - 5px),10% 100%,0 calc(100% - 5px))}
+.cv-sueco .sw:nth-child(1){--sh:72%;background-image:repeating-linear-gradient(45deg,var(--line-strong) 0 1px,transparent 1px 7px)}
+.cv-sueco .sw:nth-child(2){--sh:88%;background-image:repeating-linear-gradient(0deg,var(--line-strong) 0 1px,transparent 1px 6px),repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 6px)}
+.cv-sueco .sw:nth-child(3){--sh:62%;background-image:linear-gradient(180deg,#1d1d22,#0f0f11)}
+.cv-sueco .sw:nth-child(4){--sh:80%;background-image:repeating-linear-gradient(0deg,rgba(13,13,15,.7) 0 6px,transparent 6px 12px),repeating-linear-gradient(90deg,var(--line-strong) 0 6px,transparent 6px 12px)}
+.cv-sueco .sw:nth-child(5){--sh:54%;background-image:radial-gradient(var(--line-strong) 1px,transparent 1.5px);background-size:8px 8px}
+.cv-sueco .on::after{content:"";position:absolute;left:6px;top:8px;bottom:14px;border-left:2px dashed var(--accent)}
 .cv-api{display:flex;align-items:center;justify-content:center;gap:22px}
 .cv-api span{position:relative;z-index:1;display:grid;place-items:center;min-width:64px;height:52px;padding:0 12px;border:1px solid var(--line-strong);background:#0d0d0f;font:500 .9375rem/1 var(--mono);letter-spacing:.06em;color:var(--muted)}
 .cv-api span:nth-child(2){border-color:var(--accent);color:var(--fg)}
@@ -753,13 +761,13 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
             <button type="button" data-filter="pro" aria-pressed="false"><span lang="pt">Profissionais</span><span lang="en">Professional</span></button>
             <button type="button" data-filter="study" aria-pressed="false"><span lang="pt">Estudos</span><span lang="en">Study projects</span></button>
           </div>
-          <p class="count" id="count" aria-live="polite"><span lang="pt">6 projetos</span><span lang="en">6 projects</span></p>
+          <p class="count" id="count" aria-live="polite"><span lang="pt">7 projetos</span><span lang="en">7 projects</span></p>
         </div>
       </div>
 
       <div class="masonry" id="masonry">
         <article class="card card--feat" data-cat="pro" aria-labelledby="c-kika">
-          <div class="cv cv-kika" style="--h:900px;--h2:660px" aria-hidden="true">
+          <div class="cv cv-kika" style="--h:560px;--h2:660px" aria-hidden="true">
             <span class="ax"></span><span class="ay"></span>
             <span class="n" style="--i:0"></span><span class="n" style="--i:1"></span><span class="n" style="--i:2"></span><span class="n" style="--i:3"></span><span class="n" style="--i:4"></span><span class="n" style="--i:5"></span><span class="n n7" style="--i:6"></span>
             <span class="q"><span lang="pt">7 ETAPAS</span><span lang="en">7 STEPS</span></span>
@@ -779,7 +787,7 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
         </article>
 
         <article class="card" data-cat="pro" aria-labelledby="c-sgt">
-          <div class="cv cv-sgt" style="--h:150px" aria-hidden="true"></div>
+          <div class="cv cv-sgt" style="--h:200px;--h2:190px" aria-hidden="true"></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Profissional / Full stack</span><span lang="en">Professional / Full stack</span></span></p>
             <h3 id="c-sgt"><span lang="pt">Sistema de Gestão Tecnológica</span><span lang="en">Technology Management System</span></h3>
@@ -790,8 +798,20 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
           </div>
         </article>
 
+        <article class="card" data-cat="pro" aria-labelledby="c-sueco">
+          <div class="cv cv-sueco" style="--h:220px;--h2:180px" aria-hidden="true"><span class="sw"></span><span class="sw on"></span><span class="sw"></span><span class="sw"></span><span class="sw"></span><span class="q"><span lang="pt">8 PÁGINAS</span><span lang="en">8 PAGES</span></span></div>
+          <div class="card-body">
+            <p class="card-meta"><span><span lang="pt">Profissional / Front-end</span><span lang="en">Professional / Front-end</span></span></p>
+            <h3 id="c-sueco" translate="no">SUECO Têxtil</h3>
+            <p lang="pt">Site institucional e catálogo digital da <span translate="no">SUECO Têxtil</span>, com cartelas de cores e estampas, coleções filtráveis e fichas técnicas dos tecidos.</p>
+            <p lang="en">Company website and digital catalog for <span translate="no">SUECO Têxtil</span>, with color and print cards, filterable collections and fabric spec sheets.</p>
+            <div class="chips" translate="no"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+            <a class="card-link" href="https://github.com/LaiAyumi/suecotextil" target="_blank" rel="noopener"><span lang="pt">Ver código<span class="sr-only"> do site da <span translate="no">SUECO Têxtil</span> no GitHub (abre em nova aba)</span></span><span lang="en">View code<span class="sr-only"> for <span translate="no">SUECO Têxtil</span> on GitHub (opens in a new tab)</span></span></a>
+          </div>
+        </article>
+
         <article class="card" data-cat="study" aria-labelledby="c-api">
-          <div class="cv cv-api" style="--h:120px" aria-hidden="true" translate="no"><span>CRUD</span><span>PDO</span><span>JSON</span></div>
+          <div class="cv cv-api" style="--h:200px;--h2:110px" aria-hidden="true" translate="no"><span>CRUD</span><span>PDO</span><span>JSON</span></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Estudo / Back-end</span><span lang="en">Study / Back-end</span></span></p>
             <h3 id="c-api"><span lang="pt">API acadêmica</span><span lang="en">Academic API</span></h3>
@@ -803,7 +823,7 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
         </article>
 
         <article class="card" data-cat="study" aria-labelledby="c-cart">
-          <div class="cv cv-cart" style="--h:130px;--h2:186px" aria-hidden="true"></div>
+          <div class="cv cv-cart" style="--h:184px;--h2:130px" aria-hidden="true"></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Estudo / Front-end</span><span lang="en">Study / Front-end</span></span></p>
             <h3 id="c-cart"><span lang="pt">Carrinho de compras</span><span lang="en">Shopping cart</span></h3>
@@ -815,7 +835,7 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
         </article>
 
         <article class="card" data-cat="study" aria-labelledby="c-games">
-          <div class="cv cv-games" style="--h:190px;--h2:240px" aria-hidden="true"><span></span><span></span><span class="out"></span></div>
+          <div class="cv cv-games" style="--h:265px;--h2:108px" aria-hidden="true"><span></span><span></span><span class="out"></span></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Estudo / Front-end</span><span lang="en">Study / Front-end</span></span></p>
             <h3 id="c-games" translate="no">AluGames</h3>
@@ -827,7 +847,7 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
         </article>
 
         <article class="card" data-cat="study" aria-labelledby="c-mini">
-          <div class="cv cv-mini" style="--h:140px;--h2:220px" aria-hidden="true"><span class="q"><span lang="pt">4 REPOSITÓRIOS</span><span lang="en">4 REPOSITORIES</span></span></div>
+          <div class="cv cv-mini" style="--h:270px;--h2:110px" aria-hidden="true"><span class="q"><span lang="pt">4 REPOSITÓRIOS</span><span lang="en">4 REPOSITORIES</span></span></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Estudo / JavaScript</span><span lang="en">Study / JavaScript</span></span></p>
             <h3 id="c-mini"><span lang="pt">Miniprojetos em JavaScript</span><span lang="en">JavaScript mini projects</span></h3>
@@ -864,8 +884,8 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
 
       <div class="note">
         <span class="chip chip--dash"><span lang="pt">Confidencial</span><span lang="en">Confidential</span></span>
-        <p lang="pt">Os projetos profissionais pertencem a clientes, por isso não há código nem demo públicos (a demonstração no case abaixo é uma simulação). Os cases mostram o problema, a arquitetura e os resultados sem expor dados. Mais do meu trabalho está no meu <a href="https://github.com/LaiAyumi" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a>.</p>
-        <p lang="en">Professional projects belong to clients, so there is no public code or demo (the demo in the case below is a simulation). The case studies show the problem, architecture and results without exposing data. More of my work is on my <a href="https://github.com/LaiAyumi" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+        <p lang="pt">O código dos projetos <span translate="no">KIKA AI</span> e Sistema de Gestão Tecnológica é confidencial e não há demo pública (a demonstração no case abaixo é uma simulação). O código dos demais projetos está no meu <a href="https://github.com/LaiAyumi" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a>.</p>
+        <p lang="en">The code for <span translate="no">KIKA AI</span> and the Technology Management System is confidential and there is no public demo (the demo in the case study below is a simulation). The code for the other projects is on my <a href="https://github.com/LaiAyumi" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a>.</p>
       </div>
     </div>
   </section>
