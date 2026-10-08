@@ -318,7 +318,7 @@ main:focus{outline:none}
 .cv-kika .n7{background:var(--accent);border-color:var(--accent)}
 .cv-kika .ax{position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line)}
 .cv-kika .ay{position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--line)}
-.cv-kika .q{position:absolute;left:16px;top:14px;font:500 .6875rem/1 var(--mono);letter-spacing:.12em;color:var(--faint)}
+.cv .q{position:absolute;left:16px;top:14px;font:500 .6875rem/1 var(--mono);letter-spacing:.12em;color:var(--faint)}
 .cv-sgt{background:
   linear-gradient(var(--line-strong),var(--line-strong)) 0 30%/100% 1px no-repeat,
   linear-gradient(var(--line-strong),var(--line-strong)) 28% 0/1px 100% no-repeat,
@@ -326,27 +326,34 @@ main:focus{outline:none}
   #0d0d0f}
 .cv-sgt::before{content:"";position:absolute;left:36%;top:42%;width:52%;height:34%;border:1px dashed var(--muted)}
 .cv-sgt::after{content:"";position:absolute;left:calc(36% - 4px);top:calc(42% - 4px);width:9px;height:9px;background:var(--accent)}
-.cv-tw{background:repeating-linear-gradient(135deg,var(--line) 0 1px,transparent 1px 14px),#0d0d0f}
-.cv-tw::before{content:"";position:absolute;left:12%;bottom:0;width:30%;height:78%;background:linear-gradient(180deg,#1d1d22,#0f0f11);clip-path:polygon(0 12%,100% 0,100% 100%,0 100%)}
-.cv-tw::after{content:"";position:absolute;left:46%;bottom:0;width:18%;height:52%;background:#16161a;box-shadow:inset 0 2px 0 var(--line-strong)}
-.cv-api{display:grid;place-content:center;grid-template-columns:repeat(2,64px);gap:10px}
-.cv-api span{display:grid;place-items:center;width:64px;height:64px;border:1px solid var(--line-strong);font:500 1.375rem/1 var(--mono);color:var(--muted)}
-.cv-api span:nth-child(3){border-color:var(--accent);color:var(--fg)}
+.cv-api{display:flex;align-items:center;justify-content:center;gap:22px}
+.cv-api span{position:relative;z-index:1;display:grid;place-items:center;min-width:64px;height:52px;padding:0 12px;border:1px solid var(--line-strong);background:#0d0d0f;font:500 .9375rem/1 var(--mono);letter-spacing:.06em;color:var(--muted)}
+.cv-api span:nth-child(2){border-color:var(--accent);color:var(--fg)}
 .cv-api::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line)}
-.cv-menu{background:
+.cv-cart{background:
   linear-gradient(var(--line-strong),var(--line-strong)) 18px 0/1px 100% no-repeat,
   repeating-linear-gradient(180deg,transparent 0 27px,var(--line) 27px 28px),
   #0d0d0f}
-.cv-menu::before{content:"";position:absolute;left:36px;top:27px;width:40%;height:28px;box-shadow:inset 0 -1px 0 var(--accent)}
-.cv-menu::after{content:"";position:absolute;right:18px;top:18px;width:38px;height:calc(100% - 36px);border:1px solid var(--line-strong)}
-.cv-sp{background:#0d0d0f}
-.cv-sp::before{content:"";position:absolute;left:18px;right:18px;bottom:0;height:82%;background:repeating-linear-gradient(90deg,var(--line-strong) 0 10px,transparent 10px 18px);
+.cv-cart::before{content:"";position:absolute;right:18px;top:84px;width:38%;height:28px;box-shadow:inset 0 -1px 0 var(--accent)}
+.cv-cart::after{content:"";position:absolute;left:36px;top:32px;width:46%;height:calc(100% - 83px);background:repeating-linear-gradient(180deg,var(--line-strong) 0 1px,#1d1d22 1px 18px,transparent 18px 28px)}
+.cv-games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:28px 18px 0;background:repeating-linear-gradient(135deg,var(--line) 0 1px,transparent 1px 14px),#0d0d0f}
+.cv-games span{position:relative;background:linear-gradient(180deg,#1d1d22,#0f0f11);box-shadow:inset 0 1px 0 var(--line-strong),inset 1px 0 0 var(--line)}
+.cv-games span::before{content:"";position:absolute;left:14px;right:14px;bottom:16px;height:10px;border:1px solid var(--line-strong)}
+.cv-games .out::after{content:"";position:absolute;inset:0;background:rgba(10,10,11,.6);box-shadow:inset 0 3px 0 var(--accent)}
+.cv-mini{background:#0d0d0f}
+.cv-mini::before{content:"";position:absolute;left:18px;right:18px;bottom:0;height:72%;background:repeating-linear-gradient(90deg,var(--line-strong) 0 3%,transparent 3% 5%);
   clip-path:polygon(0 60%,10% 60%,10% 30%,20% 30%,20% 70%,30% 70%,30% 10%,40% 10%,40% 50%,50% 50%,50% 25%,60% 25%,60% 65%,70% 65%,70% 40%,80% 40%,80% 75%,90% 75%,90% 45%,100% 45%,100% 100%,0 100%)}
-.cv-sp::after{content:"";position:absolute;left:18px;right:18px;bottom:0;height:1px;background:var(--accent)}
+.cv-mini::after{content:"";position:absolute;left:18px;right:18px;bottom:0;height:1px;background:var(--accent)}
+.minis{display:grid;border-top:1px solid var(--line)}
+.minis li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:6px 16px;padding:14px 0 16px;border-bottom:1px solid var(--line)}
+.minis h4{font:600 1.125rem/1.2 var(--display);letter-spacing:-.015em}
+.minis p{grid-column:1 / -1}
+.minis .card-link{margin-top:0;margin-block:-3px;padding:9px 0;border-bottom-color:var(--line-strong)}
+.minis .card-link:hover,.minis .card-link:focus-visible{border-bottom-color:var(--accent)}
 .note{margin-top:40px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;padding-top:28px;border-top:1px solid var(--line);color:var(--muted);max-width:80ch}
 .note .chip{white-space:nowrap}
 .note a{color:var(--fg);text-decoration-color:var(--accent);text-underline-offset:4px}
-@media (max-width:1024px){.masonry{columns:2}}
+@media (max-width:1100px){.masonry{columns:2}.cv{height:var(--h2,var(--h,220px))}}
 @media (max-width:560px){pre.sql{font-size:.75rem;padding:14px 12px}}
 @media (max-width:640px){.masonry{columns:1}.note{grid-template-columns:1fr}}
 
@@ -752,7 +759,7 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
 
       <div class="masonry" id="masonry">
         <article class="card card--feat" data-cat="pro" aria-labelledby="c-kika">
-          <div class="cv cv-kika" style="--h:620px" aria-hidden="true">
+          <div class="cv cv-kika" style="--h:900px;--h2:660px" aria-hidden="true">
             <span class="ax"></span><span class="ay"></span>
             <span class="n" style="--i:0"></span><span class="n" style="--i:1"></span><span class="n" style="--i:2"></span><span class="n" style="--i:3"></span><span class="n" style="--i:4"></span><span class="n" style="--i:5"></span><span class="n n7" style="--i:6"></span>
             <span class="q"><span lang="pt">7 ETAPAS</span><span lang="en">7 STEPS</span></span>
@@ -772,7 +779,7 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
         </article>
 
         <article class="card" data-cat="pro" aria-labelledby="c-sgt">
-          <div class="cv cv-sgt" style="--h:220px" aria-hidden="true"></div>
+          <div class="cv cv-sgt" style="--h:150px" aria-hidden="true"></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Profissional / Full stack</span><span lang="en">Professional / Full stack</span></span></p>
             <h3 id="c-sgt"><span lang="pt">Sistema de Gestão Tecnológica</span><span lang="en">Technology Management System</span></h3>
@@ -783,55 +790,82 @@ pre.sql--none{border-left:1px dashed var(--line-strong);color:var(--muted)}
           </div>
         </article>
 
-        <article class="card" data-cat="study" aria-labelledby="c-tw">
-          <div class="cv cv-tw" style="--h:250px" aria-hidden="true"></div>
-          <div class="card-body">
-            <p class="card-meta"><span><span lang="pt">Estudo / Web</span><span lang="en">Study / Web</span></span></p>
-            <h3 id="c-tw" translate="no">Twitter Clone</h3>
-            <p lang="pt">Cadastro de usuários, timeline e publicação de tweets.</p>
-            <p lang="en">User sign-up, timeline and posting tweets.</p>
-            <div class="chips" translate="no"><span class="chip">PHP 7</span><span class="chip">MySQL</span></div>
-          </div>
-        </article>
-
         <article class="card" data-cat="study" aria-labelledby="c-api">
-          <div class="cv cv-api" style="--h:200px" aria-hidden="true"><span>C</span><span>R</span><span>U</span><span>D</span></div>
+          <div class="cv cv-api" style="--h:120px" aria-hidden="true" translate="no"><span>CRUD</span><span>PDO</span><span>JSON</span></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Estudo / Back-end</span><span lang="en">Study / Back-end</span></span></p>
             <h3 id="c-api"><span lang="pt">API acadêmica</span><span lang="en">Academic API</span></h3>
-            <p lang="pt">CRUD completo com integração ao banco de dados.</p>
-            <p lang="en">Full CRUD with database integration.</p>
-            <div class="chips" translate="no"><span class="chip">PHP</span><span class="chip">MySQL</span></div>
+            <p lang="pt">API REST em PHP puro com CRUD completo de alunos, validação dos dados e MySQL via PDO.</p>
+            <p lang="en">REST API in plain PHP with full CRUD for students, input validation and MySQL through PDO.</p>
+            <div class="chips" translate="no"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">PDO</span></div>
+            <a class="card-link" href="https://github.com/LaiAyumi/projwebservices" target="_blank" rel="noopener"><span lang="pt">Ver código<span class="sr-only"> da API acadêmica no GitHub (abre em nova aba)</span></span><span lang="en">View code<span class="sr-only"> for Academic API on GitHub (opens in a new tab)</span></span></a>
           </div>
         </article>
 
-        <article class="card" data-cat="study" aria-labelledby="c-menu">
-          <div class="cv cv-menu" style="--h:140px" aria-hidden="true"></div>
+        <article class="card" data-cat="study" aria-labelledby="c-cart">
+          <div class="cv cv-cart" style="--h:130px;--h2:186px" aria-hidden="true"></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Estudo / Front-end</span><span lang="en">Study / Front-end</span></span></p>
-            <h3 id="c-menu"><span lang="pt">Cardápio digital</span><span lang="en">Digital menu</span></h3>
-            <p lang="pt">Site de cardápio para um restaurante.</p>
-            <p lang="en">Menu website for a restaurant.</p>
-            <div class="chips" translate="no"><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+            <h3 id="c-cart"><span lang="pt">Carrinho de compras</span><span lang="en">Shopping cart</span></h3>
+            <p lang="pt">Escolha o produto e a quantidade, adicione ao carrinho e veja o total atualizar na hora.</p>
+            <p lang="en">Pick a product and a quantity, add it to the cart and watch the total update instantly.</p>
+            <div class="chips" translate="no"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+            <a class="card-link" href="https://github.com/LaiAyumi/lojaalr" target="_blank" rel="noopener"><span lang="pt">Ver código<span class="sr-only"> do Carrinho de compras no GitHub (abre em nova aba)</span></span><span lang="en">View code<span class="sr-only"> for Shopping cart on GitHub (opens in a new tab)</span></span></a>
           </div>
         </article>
 
-        <article class="card" data-cat="study" aria-labelledby="c-sp">
-          <div class="cv cv-sp" style="--h:170px" aria-hidden="true"></div>
+        <article class="card" data-cat="study" aria-labelledby="c-games">
+          <div class="cv cv-games" style="--h:190px;--h2:240px" aria-hidden="true"><span></span><span></span><span class="out"></span></div>
           <div class="card-body">
             <p class="card-meta"><span><span lang="pt">Estudo / Front-end</span><span lang="en">Study / Front-end</span></span></p>
-            <h3 id="c-sp"><span lang="pt">Interface do Spotify</span><span lang="en">Spotify interface</span></h3>
-            <p lang="pt">Layout responsivo com grid e flexbox.</p>
-            <p lang="en">Responsive layout with grid and flexbox.</p>
-            <div class="chips" translate="no"><span class="chip">Bootstrap 4</span></div>
+            <h3 id="c-games" translate="no">AluGames</h3>
+            <p lang="pt">Vitrine de jogos de tabuleiro em que um clique alterna cada jogo entre disponível e alugado.</p>
+            <p lang="en">Board game rental page where one click toggles each game between available and rented.</p>
+            <div class="chips" translate="no"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+            <a class="card-link" href="https://github.com/LaiAyumi/alugames" target="_blank" rel="noopener"><span lang="pt">Ver código<span class="sr-only"> do AluGames no GitHub (abre em nova aba)</span></span><span lang="en">View code<span class="sr-only"> for AluGames on GitHub (opens in a new tab)</span></span></a>
+          </div>
+        </article>
+
+        <article class="card" data-cat="study" aria-labelledby="c-mini">
+          <div class="cv cv-mini" style="--h:140px;--h2:220px" aria-hidden="true"><span class="q"><span lang="pt">4 REPOSITÓRIOS</span><span lang="en">4 REPOSITORIES</span></span></div>
+          <div class="card-body">
+            <p class="card-meta"><span><span lang="pt">Estudo / JavaScript</span><span lang="en">Study / JavaScript</span></span></p>
+            <h3 id="c-mini"><span lang="pt">Miniprojetos em JavaScript</span><span lang="en">JavaScript mini projects</span></h3>
+            <ul class="minis">
+              <li>
+                <h4><span lang="pt">Amigo secreto</span><span lang="en">Secret Santa draw</span></h4>
+                <a class="card-link" href="https://github.com/LaiAyumi/amgsecret" target="_blank" rel="noopener"><span lang="pt">Ver código<span class="sr-only"> do Amigo secreto no GitHub (abre em nova aba)</span></span><span lang="en">View code<span class="sr-only"> for Secret Santa draw on GitHub (opens in a new tab)</span></span></a>
+                <p lang="pt">Cadastra participantes, bloqueia nomes repetidos e sorteia os pares em ciclo, sem que ninguém tire o próprio nome.</p>
+                <p lang="en">Adds participants, blocks duplicate names and draws pairs in one closed chain, so nobody draws their own name.</p>
+              </li>
+              <li>
+                <h4><span lang="pt">Sorteador de números</span><span lang="en">Number picker</span></h4>
+                <a class="card-link" href="https://github.com/LaiAyumi/SorteioJs" target="_blank" rel="noopener"><span lang="pt">Ver código<span class="sr-only"> do Sorteador de números no GitHub (abre em nova aba)</span></span><span lang="en">View code<span class="sr-only"> for Number picker on GitHub (opens in a new tab)</span></span></a>
+                <p lang="pt">Sorteia a quantidade escolhida de números, sem repetição, dentro de um intervalo definido pelo usuário.</p>
+                <p lang="en">Draws the chosen number of non-repeating values within a range the user sets.</p>
+              </li>
+              <li>
+                <h4><span lang="pt">Jogo de adivinhação</span><span lang="en">Guessing game</span></h4>
+                <a class="card-link" href="https://github.com/LaiAyumi/AdvJs" target="_blank" rel="noopener"><span lang="pt">Ver código<span class="sr-only"> do Jogo de adivinhação no GitHub (abre em nova aba)</span></span><span lang="en">View code<span class="sr-only"> for Guessing game on GitHub (opens in a new tab)</span></span></a>
+                <p lang="pt">Adivinhe o número de 1 a 10 com dicas de maior ou menor e mensagens lidas em voz alta.</p>
+                <p lang="en">Guess a number from 1 to 10 with higher or lower hints and messages read aloud.</p>
+              </li>
+              <li>
+                <h4><span lang="pt">Estrelas cadentes</span><span lang="en">Shooting stars</span></h4>
+                <a class="card-link" href="https://github.com/LaiAyumi/stars" target="_blank" rel="noopener"><span lang="pt">Ver código<span class="sr-only"> das Estrelas cadentes no GitHub (abre em nova aba)</span></span><span lang="en">View code<span class="sr-only"> for Shooting stars on GitHub (opens in a new tab)</span></span></a>
+                <p lang="pt">Estrelas cadentes geradas em JavaScript com posição, tamanho e velocidade aleatórios, animadas com CSS.</p>
+                <p lang="en">Shooting stars generated in JavaScript with random position, size and speed, animated with CSS.</p>
+              </li>
+            </ul>
+            <div class="chips" translate="no"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
           </div>
         </article>
       </div>
 
       <div class="note">
         <span class="chip chip--dash"><span lang="pt">Confidencial</span><span lang="en">Confidential</span></span>
-        <p lang="pt">Os projetos profissionais pertencem a clientes, por isso não há código nem demo públicos (a demonstração no case abaixo é uma simulação). Os cases mostram o problema, a arquitetura e os resultados sem expor dados. Mais do meu trabalho está no meu <a href="https://github.com/LaiAyumi" target="_blank" rel="noopener">GitHub</a>.</p>
-        <p lang="en">Professional projects belong to clients, so there is no public code or demo (the demo in the case below is a simulation). The case studies show the problem, architecture and results without exposing data. More of my work is on my <a href="https://github.com/LaiAyumi" target="_blank" rel="noopener">GitHub</a>.</p>
+        <p lang="pt">Os projetos profissionais pertencem a clientes, por isso não há código nem demo públicos (a demonstração no case abaixo é uma simulação). Os cases mostram o problema, a arquitetura e os resultados sem expor dados. Mais do meu trabalho está no meu <a href="https://github.com/LaiAyumi" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a>.</p>
+        <p lang="en">Professional projects belong to clients, so there is no public code or demo (the demo in the case below is a simulation). The case studies show the problem, architecture and results without exposing data. More of my work is on my <a href="https://github.com/LaiAyumi" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a>.</p>
       </div>
     </div>
   </section>
