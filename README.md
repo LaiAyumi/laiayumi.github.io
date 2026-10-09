@@ -8,7 +8,7 @@ Site publicado em: https://laiayumi.github.io
 
 - Página única em HTML, CSS e JavaScript puros, sem build e sem dependências.
 - Bilíngue (português e inglês), com botão PT/EN no topo.
-- Seções: hero em carrossel, sobre, projetos com filtro, case da KIKA AI com simulação interativa, trajetória, números e contato.
+- Seções: hero em carrossel, sobre, projetos com filtro, case do agente de IA com simulação interativa, trajetória, números e contato.
 - Os projetos profissionais são confidenciais: o site descreve problema, arquitetura e resultados sem expor código ou dados. A simulação usa tabelas e clientes fictícios.
 
 ## Como editar
